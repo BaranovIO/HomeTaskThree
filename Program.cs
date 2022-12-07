@@ -1,16 +1,16 @@
-﻿bool Palindrome (int number)
+﻿bool Palindrome (int originalNumber)
 
-{   int originalNumber = number;
+{   int number = originalNumber;
     int reverse = 0;
     
-    while(originalNumber > 0)
+    while(number > 0)
     {
-        int lastDigit = originalNumber % 10;
+        int lastDigit = number % 10;
         reverse = reverse * 10 + lastDigit;
-        originalNumber = originalNumber / 10;
+        number = number / 10;
     }
 
-    if(number == reverse) 
+    if(originalNumber == reverse) 
         return true;
     else
         return false;
